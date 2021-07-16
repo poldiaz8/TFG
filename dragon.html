@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+</head>
+<body>
+  <a-scene anti-alias>
+    <a-assets>
+        <a-asset-item id="dragon"  src="./Escenas-Sketchfab/black_dragon_with_idle_animation/scene.gltf"></a-asset-item>
+    </a-assets>
+
+  <a-entity gltf-model="#dragon" scale="0.001 0.001 0.001"></a-entity>
+
+    <a-entity movement-controls="fly: true" position="0 0 0">
+      <a-entity camera position="0 1.6 0"></a-entity>
+    </a-entity>
+  </a-scene>
+</body>
+</html>
