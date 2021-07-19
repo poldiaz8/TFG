@@ -70,3 +70,30 @@ body {
     padding: 0 3rem 0 3rem;
   }
 }
+
+.form-register{
+    width: 400px;
+    padding: 30px;
+    margin:auto;
+    margin-top:100px;
+    border-radius: 4px;
+    color:white;
+    font-family: 'Helvetica', cursive;  
+}
+
+.input-code{
+    width: 20%;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #1f53c5;
+    
+}
+
+.input-form{
+    width: 100%;
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid #1f53c5;
+    
+}
+

@@ -5,6 +5,7 @@
     <title>Vídeo Background</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Monaco" rel="stylesheet"> 
+    <script type="module" src="bd/crud/create.js"></script>
   </head>
   <body>
     <header class="header content">
@@ -15,8 +16,29 @@
       <div class="header-content">
         <h1>Trabajo de Fin de Grado</h1>
         <p>Pablo Díaz García</p>
+        <p>Inserte Código de Modelo</p>
+        <input class="input-code" type="text" name="Código1" id="intro" placeholder="Código">
         <a href="test.html" class="btn">Ir a Realidad Virtual</a>
+        <section class="form-register">
+            <h4>Registro de Modelo</h4>
+            <input class="input-form" type="text" name="code" id="code" placeholder="'101'">
+            <input class="input-form" type="text" name="URL" id="url" placeholder="'www.hola.com'">
+            <button class="btn btn-danger" value="Registrar" onClick="registrar()">Registrar Modelo</button>
+        </section> 
       </div>
+     
+          
+    
     </header>
+      
   </body>
+    <script type="text/javascript">
+        function registrar()
+        {
+            const codigo = document.getElementById("code").value;
+            const url = document.getElementById("URL").value;
+            create(codigo,url);
+            
+        }
+    </script>
 </html>
