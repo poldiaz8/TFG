@@ -14,3 +14,4 @@ db.once('open', _ => { //esto solo ocurre una vez cuand ose abre la conexion
     console.log('Conectado correctamente a la base de datos');
 })
     
+module.exports = mongoose;

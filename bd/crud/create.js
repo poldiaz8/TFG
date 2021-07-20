@@ -1,5 +1,4 @@
-require('./connection')
-
+const {mongoose} = require('./connection')
 
 
 const Pair = require('./modelos/Pair')
