@@ -1,5 +1,7 @@
 require('./connection')
 
+
+
 const Pair = require('./modelos/Pair')
 
 
@@ -12,3 +14,5 @@ async function create(codigo,direccion){
     await pair.save();
     console.log(pair);
 }
+
+export {create}
