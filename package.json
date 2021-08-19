@@ -4,7 +4,7 @@
   "description": "Acortador URL's con Express y Mongoose",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js "
+    "start": "node ./index.php "
   },
   "author": "Pablo Diaz Garcia",
   "license": "ISC",
