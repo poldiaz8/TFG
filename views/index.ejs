@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>TFG</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+  <script>
+       /*
+      <% if(typeof auxError === 'undefined'){
+
+      }else{
+        %>; console.log("hey");//window.alert("Duplicada"); 
+        <%
+      }
+      %>;
+     */
+    </script>
+</head>
+
+<body>
+  <header class="header-content">
+    <!--
+      <div class="header-video">
+        <video src="../../EscenasSketchfab/Ceiling877.mp4" muted autoplay loop></video>
+      </div>
+      -->
+
+    <div class="wrapper" >
+      <form class="form" action="placeholder" method="GET" id="visualizar-modelo">
+        <div class="pageTitle title">Visualizar Modelo</div>
+        <div>
+          <input class="name formEntry" type="number" name="codigo1" id="codigo1" placeholder="Inserta tu codigo aquí"
+            required>
+        </div>
+        <div class="button">
+          <input type="submit" class="submit formEntry" value="Ir al Modelo">
+        </div>
+      </form>
+      <form class="form2" action="/index" method="POST" id="agregar-modelo" enctype="multipart/form-data">
+        <div class="pageTitle title">Registrar un modelo</div>
+        <% if(typeof auxError !== 'undefined') { %>
+          <div class="alert alert-danger">
+              Error: Código ya existente
+          </div>
+      <% } %>
+        <div class="form-group">
+          <input class="name formEntry" type="number" name="codigo" id="codigo" placeholder="Inserta tu codigo aquí"
+            required>
+        </div>
+        <div class="form-group">
+          <input class="archivo" type="file" name="url" id="url" placeholder="Importar modelo" required>
+        </div>
+        <button type="submit" class="submit formEntry">
+          Añadir Modelo
+        </button>
+      </form>
+    </div>
+
+  </header>
+</body>
+<script>
+  
+  document.getElementById('visualizar-modelo').addEventListener('submit', function (s) {
+    s.preventDefault; //para q no se quede en la misma pagina
+    const codigo = document.getElementById('codigo1').value;
+    this.action = '/modelo/' + codigo;
+    this.submit();
+  });
+  
+</script>
+
+</html>
