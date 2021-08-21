@@ -1,10 +1,10 @@
 {
-  "name": "acortadorurl",
+  "name": "visualizadordemodelos",
   "version": "1.0.0",
-  "description": "Acortador URL's con Express y Mongoose",
+  "description": "Visualizador de Modelos con Express y Mongoose",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.php "
+    "start": "node ./index.js "
   },
   "author": "Pablo Diaz Garcia",
   "license": "ISC",

@@ -65,7 +65,7 @@ module.exports = (server,passport) => {
     router.get('/index',isLogged, (req,res) => {
         res.render('index');
     })
-    //comodin para todos los codigos
+
     router.post('/index', upload.single('url'),modelController.agregarModelo);
                             //tiene que coincidir con name del campo
     router.get('/modelo/:codigo',modelController.findCodigo);
@@ -75,11 +75,7 @@ module.exports = (server,passport) => {
         req.logout();
         res.redirect('/');
     });
-    /*
-    router.get('/index/err1', (req,res) => {
-        res.render('index', { auxError: "1" });
-    });
-    */
+
     return router;
 }
 
