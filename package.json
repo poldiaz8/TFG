@@ -4,7 +4,7 @@
   "description": "Visualizador de Modelos con Express y Mongoose",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js "
+    "start": "nodemon ./index.js "
   },
   "author": "Pablo Diaz Garcia",
   "license": "ISC",

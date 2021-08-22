@@ -23,42 +23,39 @@ exports.home = (req, res) => {
 exports.agregarModelo = async (req, res, next) => {
     //let respuesta;
     //upload.single('url'); problema gordo intentando coger el file name
-    console.log('./public/modelos/' + req.file.filename);
+    //console.log('./public/modelos/' + req.file.filename);
+    
     const modelo = new Modelo({
         code: req.body.codigo,
         url: '/modelos/' + req.file.filename
     });
-    //const m = Modelo.findOne({code : req.body.codigo});
+    console.log(modelo);
+    var control = "0";
+    try{
 
-    try {
-        //if (Modelo.findOne({'code' : modelo.code}) == null){
-        //    window.alert('Codigo no valido');
-        //}else{
         let resultado = await modelo.save();
-        //}
-        /*respuesta = {
-            codigo: 201,
-            mensaje: 'Almacenado Correctamente'
-        */
-    } catch (error) {
+
+    }catch (error) {
         console.log(error);
         /*respuesta = {
             error: 400,
             error: 'Hubo un error'
         }*/
-        var error1 = error;
+        control = "1";
     }
     //res.json(respuesta);
+    //console.log(control);
+
 
     next();
-    res.render('index', { auxError: error1.code });
+
+    res.render('index', { auxError: control });
 }
 
 exports.findCodigo = async (req, res, next) => {
-    const modelo = await Modelo.findOne({
-        code: req.params.codigo
-    });
     
+    const modelo = await Modelo.findOne({code: req.params.codigo});
+
     res.render('modelo', {
         modelo
     });
