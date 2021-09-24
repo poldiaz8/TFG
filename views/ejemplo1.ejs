@@ -36,6 +36,7 @@
   <a-scene anti-alias>
     <a-assets>
         <a-asset-item id="escena" src="/modelos/ejemplos/ejemplo1/scene.gltf"></a-asset-item>
+        <a-asset-item id="mando" src="/modelos/oculus-go-controller"></a-asset-item>
     </a-assets>
 
     <a-camera>
@@ -43,6 +44,7 @@
 
       </a-cursor>
     </a-camera>
+    <a-entity gltf-model="#mando"></a-entity>
     <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
     <a-entity gltf-model="#escena" animar="take: Default Take">
       
