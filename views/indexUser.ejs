@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>TFG</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+</head>
+
+<body>
+  <header class="header-content">
+    <!--
+      <div class="header-video">
+        <video src="../../EscenasSketchfab/Ceiling877.mp4" muted autoplay loop></video>
+      </div>
+      -->
+
+    <div class="wrapper" >
+      <form class="form" action="placeholder" method="GET" id="visualizar-modelo">
+        <div class="pageTitle title">Visualizar Modelo</div>
+        <div>
+          <input class="name formEntry" type="number" name="codigo1" id="codigo1" placeholder="Inserta tu codigo aquí"
+            required>
+        </div>
+        <div class="button">
+          <input type="submit" class="submit formEntry" value="Ir al Modelo">
+        </div>
+      </form>
+    </div>
+
+  </header>
+</body>
+<script>
+  
+  document.getElementById('visualizar-modelo').addEventListener('submit', function (s) {
+    s.preventDefault; //para q no se quede en la misma pagina
+    const codigo = document.getElementById('codigo1').value;
+    this.action = '/modelo/' + codigo;
+    this.submit();
+  });
+  
+</script>
+
+</html>

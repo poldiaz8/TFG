@@ -34,9 +34,9 @@ module.exports = (server,passport) => {
         
         if (usuario != null){
             if (usuario.local.admin){
-                auxSuccess = '/register';
-            }else{
                 auxSuccess = '/index';
+            }else{
+                auxSuccess = '/indexUser';
             }
         }
 
@@ -66,6 +66,10 @@ module.exports = (server,passport) => {
         res.render('index');
     })
 
+    router.get('/indexUser',isLogged, (req,res) => {
+        res.render('indexUser');
+    })
+
     router.post('/index', upload.single('url'),modelController.agregarModelo);
                             //tiene que coincidir con name del campo
     router.get('/modelo/:codigo',modelController.findCodigo);
@@ -76,7 +80,10 @@ module.exports = (server,passport) => {
         res.redirect('/');
     });
 
+
     return router;
+
+    
 }
 
 function isLogged(req,res,next){

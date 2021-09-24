@@ -1,6 +1,7 @@
 const express = require('express');
 const server = express();
 
+const fileUpload = require('express-fileupload');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const morgan = require('morgan');
@@ -61,13 +62,14 @@ server.use(cookieParser());
 server.use('/',require('./router/index.js')(server,passport));
 //require('./router')(server,passport);
 
-/*
+
 server.listen('3000', function() {
     console.log('Servidor web escuchando en el puerto 3000');
   });
-*/
+/*
 server.set('port',process.env.PORT || 3000);
 
 server.listen(server.get('port'), () => {
     console.log('Server on port' ,server.get('port'))
 })
+*/

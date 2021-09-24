@@ -4,7 +4,7 @@
   "description": "Visualizador de Modelos con Express y Mongoose",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js "
+    "start": "nodemon ./index.js "
   },
   "author": "Pablo Diaz Garcia",
   "license": "ISC",
@@ -17,7 +17,9 @@
     "connect-mongo": "^3.0.0",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.0.0",
+    "ejs": "^0.8.5",
     "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
     "express-session": "^1.17.2",
     "mime-types": "^2.1.31",
     "mongoose": "^5.6.4",
@@ -28,7 +30,6 @@
     "pug": "^2.0.4",
     "session": "^0.1.0",
     "shortid": "^2.2.14",
-    "slug": "^1.1.0",
-    "ejs": "^0.8.5"
+    "slug": "^1.1.0"
   }
 }
