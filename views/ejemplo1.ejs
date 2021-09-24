@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo 1</title>
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+</head>
+<script>
+  
+  AFRAME.registerComponent('animar', {
+      schema: {
+        take: {default: '*'}
+      },
+  
+      init: function () {
+        var data = this.data;
+        var el = this.el;  
+        
+        el.addEventListener('triggerdown', function () {
+          el.setAttribute('animation-mixer', {
+            clip:  data.take,
+            loop: 'once'
+          });
+          
+        });
+  
+        el.addEventListener('animation-finished', function () {
+          el.removeAttribute('animation-mixer');
+        });
+        
+      }
+    });
+    
+  </script>
+<body>
+  <a-scene anti-alias>
+    <a-assets>
+        <a-asset-item id="escena" src="/modelos/ejemplos/ejemplo1/scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-camera>
+      <a-cursor color="#ffba70" position="0 0 -1">
+
+      </a-cursor>
+    </a-camera>
+    <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+    <a-entity gltf-model="#escena" animar="take: Default Take">
+      
+    </a-entity>
+    <a-entity oculus-go-controls="hand: left"></a-entity>
+    <a-sky color="#ECECEC"></a-sky>
+    <a-entity movement-controls="fly: true" position="0 0 0">
+      <a-entity camera position="-10 1.6 0"></a-entity>
+    </a-entity>
+  </a-scene>
+</body>
+
+</html>

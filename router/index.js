@@ -80,6 +80,17 @@ module.exports = (server,passport) => {
         res.redirect('/');
     });
 
+    router.post('/ejemplo1', (req,res) => {
+        res.render('ejemplo1');
+    })
+
+    router.post('/ejemplo2', (req,res) => {
+        res.render('ejemplo2');
+    })
+
+    router.post('/ejemplo3', (req,res) => {
+        res.render('ejemplo3');
+    })
 
     return router;
 
