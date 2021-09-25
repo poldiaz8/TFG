@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Ejemplo 1</title>
-  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="https://rawgit.com/aframevr/aframe/master/dist/aframe-master.js"></script>
   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
 </head>
 <script>
@@ -49,10 +49,10 @@
     <a-entity gltf-model="#escena" animar="take: Default Take">
       
     </a-entity>
-    <a-entity oculus-go-controls="hand: left"></a-entity>
+    <a-entity oculus-go-controls="hand: right"></a-entity>
     <a-sky color="#ECECEC"></a-sky>
     <a-entity movement-controls="fly: true" position="0 0 0">
-      <a-entity camera position="-10 1.6 0"></a-entity>
+      <a-entity camera position="0 1.6 0"></a-entity>
     </a-entity>
   </a-scene>
 </body>
