@@ -53,8 +53,9 @@
     <a-entity oculus-go-controls="hand: right"></a-entity>
     <a-sky color="#ECECEC"></a-sky>
     <a-entity movement-controls="fly: true" position="0 0 0">
-      <a-entity camera position="0 1.6 0"></a-entity>
-    </a-entity>
+      <a-entity id="rig" position="25 10 0">
+        <a-entity id="camera" camera look-controls></a-entity>
+      </a-entity>
   </a-scene>
 </body>
 
