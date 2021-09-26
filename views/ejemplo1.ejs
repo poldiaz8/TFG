@@ -36,14 +36,14 @@
   <a-scene anti-alias>
     <a-assets>
         <a-asset-item id="escena" src="/modelos/ejemplos/ejemplo1/scene.gltf"></a-asset-item>
-        <a-asset-item id="mando" src="/modelos/oculus-go-controller.gltf"></a-asset-item>
     </a-assets>
 
     <a-entity gltf-model="#escena" animar="take: Default Take">
-
+       <!-- <a-entity oculus-go-controls="hand: right"></a-entity>
+     <a-entity laser-controls="hand: right"></a-entity> -->
   </a-entity>
     
-  <a-entity id="rig" movement-controls position="25 0 25">
+  <a-entity id="rig" oculus-go-controls="hand: right" position="25 0 25">
     <a-entity camera position="0 1.6 0" look-controls="pointerLockEnabled: true"></a-entity>
   </a-entity>
 
