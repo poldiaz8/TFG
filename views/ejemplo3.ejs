@@ -11,11 +11,14 @@
         <a-asset-item id="escena" src="/modelos/ejemplos/ejemplo3/scene.gltf"></a-asset-item>
     </a-assets>
 
-  <a-entity gltf-model="#escena" scale="0.1 0.1 0.1"></a-entity>
-
-    <a-entity movement-controls="fly: true" position="25 25 25">
-      <a-entity camera position="0 1.6 0"></a-entity>
+  <a-entity gltf-model="#escena" scale="0.05 0.05 0.05"></a-entity>
+  <a-sky color="#ECECEC"></a-sky>
+  <a-entity id="rig" movement-controls position="25 25 25">
+    <a-entity camera
+    position="0 1.6 0"
+    look-controls="pointerLockEnabled: true">
     </a-entity>
+  </a-entity>
   </a-scene>
 </body>
 
