@@ -35,10 +35,10 @@
 <body>
   <a-scene anti-alias>
     <a-assets>
-        <a-asset-item id="escena" src="/modelos/ejemplos/ejemplo3/scene.gltf"></a-asset-item>
+        <a-asset-item id="escena" src="/modelos/ejemplos/ejemplo1/scene.gltf"></a-asset-item>
     </a-assets>
 
-  <a-entity gltf-model="#escena" scale="0.05 0.05 0.05" animar="take:Static pose"></a-entity>
+  <a-entity gltf-model="#escena" scale="0.05 0.05 0.05" animar="take: Default Take"></a-entity>
   <a-sky color="#ECECEC"></a-sky>
   <a-entity id="rig" movement-controls position="0 25 200">
     <a-entity camera
