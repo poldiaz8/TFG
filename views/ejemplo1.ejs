@@ -42,12 +42,13 @@
     <a-entity gltf-model="#escena" animar="take: Default Take">
     
 
-    <a-entity movement-controls="fly: true" position="0 0.4 1">
-      <a-entity camera position="0 0 0">
+      <a-entity id="rig" movement-controls position="25 0 25">
+        <a-entity camera position="0 1.6 0" look-controls="pointerLockEnabled: true"></a-entity>
       </a-entity>
+      
       <a-entity oculus-go-controls="hand: right"></a-entity>
       <a-entity laser-controls="hand: right"></a-entity>
-    </a-entity>
+  
 
   </a-entity>
     
