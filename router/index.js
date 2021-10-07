@@ -57,7 +57,7 @@ module.exports = (server,passport) => {
     });
 
     router.post('/register', passport.authenticate('local-signup', {
-        successRedirect: '/index',
+        successRedirect: '/indexUser',
         failureRedirect: '/register',
         failureFlash: true
     }));
